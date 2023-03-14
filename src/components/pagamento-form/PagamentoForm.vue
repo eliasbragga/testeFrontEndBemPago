@@ -130,7 +130,7 @@
             <hr />
             <div>
               <h2>Forma de pagamento</h2>
-            </div>
+            </div>        
 
             <div id="radio">
               <v-radio-group v-model="pagamentoRadio" @change="radioClick">
@@ -290,6 +290,7 @@ export default {
   name: "PagamentoForm",
   data() {
     return {
+      isActive:false,
       TelefoneOpcional: "",
       nomeButton: "VERIFICAR",
       disabledButton: false,

@@ -1,47 +1,51 @@
 <template>
-  <v-app>
-    <div>
-      <v-navigation-drawer v-model="drawer" app dark color="#000">
-        <v-list-item class="px-2">
-          <v-list-item-avatar> </v-list-item-avatar>
-        </v-list-item>
-        <v-divider></v-divider>
-
-        <v-list dense nav>
-          <v-list-item v-for="item in items" :key="item.title" link>
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content @click="drawer = !drawer">
-              <router-link :to="item.to">{{ item.title }}</router-link>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-    </div>
-
-    <v-app-bar app>
+  <div>
+    <v-app>
       <div>
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      </div>
-      <div class="barAndH1">
-        <h1>Figurinhas</h1>
+        <v-navigation-drawer v-model="drawer" app dark color="#000">
+          <v-list-item class="px-2">
+            <v-list-item-avatar> </v-list-item-avatar>
+          </v-list-item>
+          <v-divider></v-divider>
+
+          <v-list dense nav>
+            <v-list-item v-for="item in items" :key="item.title" link>
+              <v-list-item-icon>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-icon>
+
+              <v-list-item-content @click="drawer = !drawer">
+                <router-link :to="item.to">{{ item.title }}</router-link>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-navigation-drawer>
       </div>
 
-      <v-toolbar-title> </v-toolbar-title>
-    </v-app-bar>
-    <div id="formFigure">
-      <div id="containerFormFigure">
-        <router-view></router-view>
+      <v-app-bar app>
+        <div>
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        </div>
+        <div class="barAndH1">
+          <h1>Figurinhas</h1>
+        </div>
+
+        <v-toolbar-title> </v-toolbar-title>
+      </v-app-bar>      
+      <div id="formFigure">
+        
+        <div id="containerFormFigure">
+          <router-view></router-view>
+        </div>
       </div>
-    </div>
-  </v-app>
+    </v-app>
+    
+  </div>
 </template>
 
 <script>
 export default {
-  name: "app",
+  name: "app", 
   data() {
     return {
       items: [

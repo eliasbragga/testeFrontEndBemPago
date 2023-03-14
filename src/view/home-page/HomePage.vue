@@ -1,5 +1,5 @@
 <template>
-  <div id="paginaInicial">
+  <div id="paginaInicial">    
     <h1>Seu site de compras</h1>
     <div id="imageDiv">
       <img id="imagem" src="../../../public/img/caixa.png" alt="" />

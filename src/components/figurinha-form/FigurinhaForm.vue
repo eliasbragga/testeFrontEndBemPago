@@ -1,5 +1,5 @@
 <template>
-  <div id="conteudo">
+  <div id="conteudo">    
     <router-view></router-view>
     <div id="divFormComp">
       <div id="container"></div>
@@ -78,6 +78,7 @@
               depressed
               color="green"
               v-show="hideButton"
+              
             >
               <router-link :to="linkButton">{{ nameButton }}</router-link>
             </v-btn>
