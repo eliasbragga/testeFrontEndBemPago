@@ -5,6 +5,11 @@
 npm install
 ```
 
+## Run test
+```
+npx cypress open
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
